@@ -1,0 +1,32 @@
+
+<ion-pane >
+
+<ion-slide-box>
+	
+		      <ion-slide ng-repeat="image in images"> 
+             <div class="container" ng-if="slideVisible($index)" class="scrollCanvas">
+                  <ion-scroll class="scrollCanvas" zooming="true" min-zoom="1" direction="xy" locked="false">
+                        <div class="image" style="background-image: url( {{image}} )"></div>  
+                  </ion-scroll>
+             </div>
+             <div>&nbsp;</div>
+      </ion-slide>
+	 
+	</ion-slide-box>
+      <hscroller>
+        <hcard ng-click = "navigate()" ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+      </hscroller>
+  
+    <ion-list list-title="News Feed">
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+  
+
+
+</ion-pane>
+
+
+
+  

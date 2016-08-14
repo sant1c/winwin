@@ -1,0 +1,35 @@
+
+<ion-pane >
+	 
+
+      <hscroller>
+        <hcard ng-click = "navigate()" ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+      </hscroller>
+<ion-slide-box>
+		      <ion-slide ng-repeat="image in images"> 
+             <div class="container" ng-if="slideVisible($index)" class="scrollCanvas">
+                  <ion-scroll class="scrollCanvas" zooming="true" min-zoom="1" direction="xy" locked="false">
+                        <div class="image" style="background-image: url( {{image}} )"></div>  
+                  </ion-scroll>
+             </div>
+             <div>&nbsp;</div>
+      </ion-slide>
+	 
+	</ion-slide-box>
+	
+</ion-pane>
+
+
+
+
+  <!--   <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Flappy bird clone</h1>
+      </ion-header-bar>
+      <ion-content>
+        <div id="gameDiv"> </div>
+      </ion-content>
+    </ion-pane> -->
+
+
+  
